@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+h1{
+    text-align: center;
+    height: 7rem;
+    line-height: 7rem;
+    font-size:4rem;
+    color: #ffffff;
+    background-color: rgb(0, 37, 84);
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+    gap: 5rem;
+}
+
+.choice{
+    background: none;
+    border: 1rem solid #0048ff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 1rem 1rem;
+}
+
+.choice img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+.choice:hover{
+    border: rgb(0, 0, 0) 1rem solid;
+}
+
+.scores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.score p{
+    font-size: 2rem;
+    color: #000000;
+}
+#userScore, #compScore{
+    font-size: 5rem;
+    color: #000000;
+}
+
+.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    color: #000000;
+}
+.play button{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem;
+    color: #ffffff;
+    background-color: #05021a;
+    cursor: pointer;
+}
