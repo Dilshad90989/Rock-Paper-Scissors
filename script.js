@@ -1,11 +1,14 @@
 let userScore = 0;
 let compScore = 0;
+let draws = 0;
+// Rock Paper Scissors Game
 
 const choices = document.querySelectorAll('.choice');
 const scoreBoard = document.querySelector('#result');
 
 const userScoreBoard = document.querySelector('#userScore');
 const compScoreBoard = document.querySelector('#compScore');
+const drawScoreBoard = document.querySelector('#draws');
 
 const genCompChoice = () => {
     const options = ['rock', 'paper', 'scissors'];
@@ -15,9 +18,12 @@ const genCompChoice = () => {
 
 const drawGame = () => {
     console.log("It's a draw!");
+    draws++;
+    drawScoreBoard.textContent = draws;
     scoreBoard.textContent = "It's a draw!";
     scoreBoard.style.backgroundColor = "blue";
 }
+
 
 const playGame = (userChoice) => {
     console.log("User choice:", userChoice);
@@ -46,17 +52,18 @@ const playGame = (userChoice) => {
     }
 };
 
+
 const showWinner = (userWins) => {
     if(userWins) {
         userScore++;
         userScoreBoard.textContent = userScore;
-        scoreBoard.textContent = "You win!";
+        scoreBoard.textContent = "You win! against computer";
         scoreBoard.style.backgroundColor = "green";
         console.log("User wins! Score:", userScore);
     } else {
         compScore++;
         compScoreBoard.textContent = compScore;
-        scoreBoard.textContent = "You lose!";
+        scoreBoard.textContent = "You lose! against computer";
         console.log("Computer wins! Score:", compScore);
         scoreBoard.style.backgroundColor = "red";
     }
@@ -64,7 +71,18 @@ const showWinner = (userWins) => {
 
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
-        const choiceID = choice.getAttribute('id');
-        playGame(choiceID);
+        const userChoice = choice.getAttribute('id');
+        playGame(userChoice);
+
     });
 }); 
+document.getElementById('reset').onclick = function() {
+    userScore = 0;
+    compScore = 0;
+    draws = 0;
+    userScoreBoard.textContent = userScore;
+    compScoreBoard.textContent = compScore;
+    drawScoreBoard.textContent = draws;
+    scoreBoard.textContent = "Scores reset!";
+    scoreBoard.style.backgroundColor = "orange";
+};

@@ -54,14 +54,15 @@ h1{
 .score{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .score p{
     font-size: 2rem;
     color: #000000;
 }
-#userScore, #compScore{
-    font-size: 5rem;
+#userScore, #compScore, #draws{
+    font-size: 4rem;
     color: #000000;
 }
 
@@ -70,7 +71,7 @@ h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     color: #000000;
 }
 .play button{
@@ -81,5 +82,21 @@ h1{
     margin: 1rem;
     color: #ffffff;
     background-color: #05021a;
+    cursor: pointer;
+}
+.reset{
+    display: flex;
+    justify-content: start;
+    margin-left: 5rem;
+    color: #000000;
+}
+.reset button{
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem;
+    color: #ffffff;
+    background-color: #9f2355;
     cursor: pointer;
 }
