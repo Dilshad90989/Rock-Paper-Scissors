@@ -36,15 +36,12 @@ const playGame = (userChoice) => {
         let userWins = false;
         if(userChoice === 'rock' && compChoice === 'scissors'){
             userWins = true;
-            console.log("User wins with rock against scissors!");
         }
         else if(userChoice === 'paper' && compChoice === 'rock'){
             userWins = true;
-            console.log("User wins with paper against rock!");
         }
         else if(userChoice === 'scissors' && compChoice === 'paper') {
             userWins = true;
-            console.log("User wins with scissors against paper!");
         } else {
             userWins = false;
         }
@@ -67,6 +64,7 @@ const showWinner = (userWins) => {
         console.log("Computer wins! Score:", compScore);
         scoreBoard.style.backgroundColor = "red";
     }
+    console.log("----------------------------------------");
 };
 
 choices.forEach((choice) => {
